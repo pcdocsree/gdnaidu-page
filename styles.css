@@ -4,6 +4,12 @@
     box-sizing: border-box;
 }
 
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+
 :root {
     --primary: #1a365d;
     --secondary: #2d3748;
@@ -2164,9 +2170,6 @@ body.gallery-page .video-card {
     }
 }
 
-.hero-right {
-    margin-top: 130px;
-}
 
 .top-notice{
     background:#fef3c7;
@@ -2403,3 +2406,127 @@ footer{
     margin: 0;
 }
 
+.content-section {
+    max-width: 1000px !important;
+    margin: 30px auto !important;
+    padding: 0 20px !important;
+}
+
+
+/* ===== MOBILE MOVING TABLE FIX – RASANT RAZOR ===== */
+@media (max-width:768px){
+
+  .content-table{
+      display:block;
+      width:100%;
+      overflow-x:auto;
+      white-space:nowrap;
+      border-radius:8px;
+      -webkit-overflow-scrolling:touch;
+  }
+
+}
+
+@media (max-width:768px){
+
+/* Main content width */
+.content-section{
+    padding: 0 14px !important;
+}
+
+/* Paragraph perfect reading style */
+.content-section p{
+    width:100% !important;
+    margin: 12px 0 !important;
+    font-size:15.5px;
+    line-height:1.75;
+    text-align:left;
+}
+
+/* Headings spacing */
+.content-section h2{
+    font-size:22px;
+    line-height:1.3;
+    margin: 24px 0 10px;
+}
+
+.content-section h3{
+    font-size:18px;
+    margin: 20px 0 8px;
+}
+
+/* Bullet list clean look */
+.content-section ul{
+    padding-left:18px;
+    margin:12px 0;
+}
+
+/* Paragraph perfect reading style */
+.content-section p{
+    width:100% !important;
+    margin: 12px 0 !important;
+    font-size:15.5px;
+    line-height:1.75;
+    text-align:left;
+}
+
+/* Headings spacing */
+.content-section h2{
+    font-size:22px;
+    line-height:1.3;
+    margin: 24px 0 10px;
+}
+
+.content-section h3{
+    font-size:18px;
+    margin: 20px 0 8px;
+}
+
+/* Bullet list clean look */
+.content-section ul{
+    padding-left:18px;
+    margin:12px 0;
+}
+
+.content-section li{
+    font-size:15px;
+    line-height:1.6;
+
+}
+/* ===== MOBILE PERFECT TEXT LAYOUT FIX ===== */
+@media (max-width:768px){
+
+  .content-section{
+      max-width:100% !important;
+      padding:0 14px !important;
+      margin:24px auto !important;
+  }
+
+  .content-section p,
+  .content-section li{
+      width:100% !important;
+      margin:12px 0 !important;
+      font-size:15.5px;
+      line-height:1.75;
+      text-align:left;
+      word-break:break-word;
+  }
+
+  .content-section h2{
+      font-size:22px;
+      margin:26px 0 10px;
+      text-align:left;
+  }
+
+  .content-section h3{
+      font-size:18px;
+      margin:20px 0 8px;
+      text-align:left;
+  }
+
+  .content-section ul,
+  .content-section ol{
+      padding-left:18px;
+      margin:12px 0;
+  }
+}
