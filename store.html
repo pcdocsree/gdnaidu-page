@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GD Naidu Books - Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Store Styles */
+        .store-hero {
+            text-align: center;
+            padding: 40px 0 30px;
+            background: #f8f9fa;
+        }
+        
+        .store-hero h1 {
+            color: #2c5aa0;
+            margin-bottom: 10px;
+        }
+        
+        .store-container {
+            padding: 40px 0 60px;
+        }
+            /* 3x3 Grid */
+    .books-grid-3x3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 30px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .book-item {
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+    
+    .book-item:hover {
+        transform: translateY(-5px);
+    }
+    
+    .book-cover {
+        width: 100%;
+        height: 350px; /* Increased height for better book display */
+        object-fit: contain; /* Changed to contain to show full book */
+        border-radius: 5px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        margin-bottom: 15px;
+        background-color: #f5f5f5; /* Background for books */
+        padding: 10px; /* Space around book image */
+    }
+    
+    .book-title {
+        font-weight: 600;
+        color: #2c5aa0;
+        font-size: 1.2em;
+        line-height: 1.3;
+        margin-top: 10px;
+    }
+        
+        /* Responsive */
+        @media (max-width: 900px) {
+            .books-grid-3x3 {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                padding: 0 20px;
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .books-grid-3x3 {
+                grid-template-columns: 1fr;
+                max-width: 300px;
+            }
+            
+            .book-cover {
+                height: 250px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="top-notice">
+        If you find any mistakes on this website, please contact us.
+    </div>
+
+    <!-- Professional Navigation -->
+    <header class="simple-nav">
+        <div class="container nav-container">
+            <div class="logo">
+                <span class="logo-text">G.D. Naidu – The Edison of India</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html" >Home</a></li>
+                    <li><a href="early-life.html">Early Life</a></li>
+                    <li><a href="inventions.html">Inventions</a></li>
+                    <li><a href="legacy.html">Legacy</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="store.html"class="active">Store</a></li>
+                    <li><a href="news.html">News</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <!-- Store Header -->
+    <section class="store-hero">
+        <div class="container">
+            <h1>G.D. Naidu Books</h1>
+        </div>
+    </section>
+
+    <!-- 3x3 Books Grid -->
+    <div class="container store-container">
+        <div class="books-grid-3x3">
+            <!-- Book 1 -->
+            <div class="book-item">
+                <img src="book/book1.png" alt="Innovation for Tomorrow" class="book-cover">
+                <div class="book-title">The Genius of G.D. Naidu: The Life and Legacy of G.D. Naidu</div>
+            </div>
+
+            <!-- Book 2 -->
+            <div class="book-item">
+                <img src="book/book2.png" alt="The Genius of G.D. Naidu" class="book-cover">
+                <div class="book-title">G. D. Naiduvin Kandupidippugal / ஜி.டி. நாயுடுவின் கண்டுபிடிப்புகள்</div>
+            </div>
+
+            <!-- Book 3 -->
+            <div class="book-item">
+                <img src="book/book3.png" alt="The Life and Legacy of G.D. Naidu" class="book-cover">
+                <div class="book-title">Industrial scientist G.D.NAIDU / ஜி.டி.நாயுடு</div>
+            </div>
+
+            <!-- Rest of the books (Book 4-9) -->
+            <div class="book-item">
+                <img src="book/book4.png" alt="Electric Motor Designs" class="book-cover">
+                <div class="book-title">தொழிலியல் விஞ்ஞானி ஜி. டி. நாயுடு: Industrial scientist G.D. Naidu (Tamil Edition)</div>
+            </div>
+
+            <div class="book-item">
+                <img src="book/book5.png" alt="Self-Made Inventor" class="book-cover">
+                <div class="book-title">இந்தியாவின் எடிசன் ஜி.டி.நாயுடு: G.D.Naidu (Tamil Edition)</div>
+            </div>
+
+            <div class="book-item">
+                <img src="book/book6.png" alt="Industrial Legacy" class="book-cover">
+                <div class="book-title">தொழில் மன்னர் ஜி.டி. நாயுடுவின் பிரயாண அனுபவமும் வாழ்க்கைக் குறிப்புக்களும் ...</div>
+            </div>
+
+            <div class="book-item">
+                <img src="book/book7.png" alt="Automobile Innovations" class="book-cover">
+                <div class="book-title">Address given by G.D. Naidu in honour of Mr. D. Nadkarni, Mrs. Nadkarni and ...</div>
+            </div>
+
+            <div class="book-item">
+                <img src="book/book8.png" alt="Formative Years" class="book-cover">
+                <div class="book-title">The Indian Chamber of Commerce, Coimbatore-Meeting held to felicitate Sri K ...</div>
+            </div>
+
+            <div class="book-item">
+                <img src="book/book9.png" alt="Transport Revolution" class="book-cover">
+                <div class="book-title">Address by G.D. Naidu at a party in honour of Mr. Lalji Mehrotra, President ...</div>
+            </div>
+
+                        <div class="book-item">
+                <img src="book/book10.png" alt="Transport Revolution" class="book-cover">
+                <div class="book-title">Welcome speech by Sri G.D. Naidu, President, The Industrial Labour Welfare ...</div>
+            </div>
+
+                                    <div class="book-item">
+                <img src="book/book11.png" alt="Transport Revolution" class="book-cover">
+                <div class="book-title">Welcome address by Mr. G.D. Naidu at the Tea Party to the Members of the Ag ...</div>
+            </div>
+
+                                    <div class="book-item">
+                <img src="book/book12.png" alt="Transport Revolution" class="book-cover">
+                <div class="book-title">Proceedings of the opening function of the Arthur Hope College of Technolog ...</div>
+            </div>
+
+                                    <div class="book-item">
+                <img src="book/book13.png" alt="Transport Revolution" class="book-cover">
+                <div class="book-title">Speech by Mr. G.D. Naidu,President, Industrial Labour Welfare Association L ...</div>
+            </div>
+
+                                              <div class="book-item">
+                <img src="book/book14.png" alt="Transport Revolution" class="book-cover">
+                <div class="book-title">Hostel day speech by Mr. G.D. Naidu at Annamalai University, with introduct ...</div>
+            </div>
+
+                                              <div class="book-item">
+                <img src="book/book15.png" alt="Transport Revolution" class="book-cover">
+                <div class="book-title">Speech delivered by Mr. G.D. Naidu, President, The Industrial Labour Welfar ...</div>
+            </div>
+
+                                              <div class="book-item">
+                <img src="book/book16.png" alt="Transport Revolution" class="book-cover">
+                <div class="book-title">Welcome speech by Mr. G.D. Naidu, Reply by Shri K. Kamaraj, Chief Minister, ...</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">G.D. Naidu</div>
+                    <div class="footer-tagline">Honoring the legacy of India's greatest inventor</div>
+                    
+                    <div class="footer-nav">
+                        <a href="index.html">Home</a>
+                        <a href="early-life.html">Early Life</a>
+                        <a href="inventions.html">Inventions</a>
+                        <a href="legacy.html">Legacy</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="store.html">Store</a>
+                        <a href="news.html">News</a> 
+                        <a href="references.html">References</a>   
+                    </div>
+                    <div class="footer-contact-line">
+                        Contact : +91 90251 61015
+                    </div>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <div class="footer-tagline">Created with <span>♥</span> by GD Naidu Fan • 2026</div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GD Naidu News - Latest Updates</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Additional styles for news page */
+        .news-page {
+            padding: 60px 0 40px;
+        }
+        
+        .page-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        .page-title h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        
+        .page-title p {
+            color: #7f8c8d;
+            font-size: 1.1rem;
+        }
+        
+        .news-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 50px;
+        }
+        
+        .news-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .news-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .news-image {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .news-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        
+        .news-card:hover .news-image img {
+            transform: scale(1.05);
+        }
+        
+        .news-content {
+            padding: 25px;
+        }
+        
+        .news-source {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .source-logo {
+            font-weight: bold;
+            font-size: 0.9rem;
+            color: #3498db;
+            margin-right: 10px;
+        }
+        
+        .news-date {
+            color: #95a5a6;
+            font-size: 0.85rem;
+        }
+        
+        .news-title {
+            font-size: 1.3rem;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .news-excerpt {
+            color: #34495e;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+        
+        .read-more {
+            color: #e74c3c;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+        
+        .read-more i {
+            margin-left: 5px;
+            transition: transform 0.3s ease;
+        }
+        
+        .news-card:hover .read-more i {
+            transform: translateX(5px);
+        }
+        
+        .news-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        
+        .news-tag {
+            background: #f8f9fa;
+            color: #3498db;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .news-load-more {
+            text-align: center;
+            margin-top: 40px;
+        }
+        
+        .load-more-btn {
+            display: inline-flex;
+            align-items: center;
+            background: #3498db;
+            color: white;
+            padding: 12px 30px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .load-more-btn:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+        }
+        
+        .news-archive {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid #eee;
+        }
+        
+        .archive-title {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #2c3e50;
+        }
+        
+        .archive-list {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .archive-item {
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .archive-item a {
+            display: flex;
+            justify-content: space-between;
+            text-decoration: none;
+            color: #34495e;
+            transition: color 0.3s ease;
+        }
+        
+        .archive-item a:hover {
+            color: #e74c3c;
+        }
+        
+        .archive-date {
+            color: #95a5a6;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .news-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .page-title h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+  <div class="top-notice">
+    If you find any mistakes on this website, please contact us.
+  </div>
+
+  <!-- Professional Navigation -->
+  <header class="simple-nav">
+    <div class="container nav-container">
+      <div class="logo">
+        <span class="logo-text">G.D. Naidu – The Edison of India</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="early-life.html">Early Life</a></li>
+          <li><a href="inventions.html">Inventions</a></li>
+          <li><a href="legacy.html">Legacy</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="store.html">Store</a></li>
+          <li><a href="news.html" class="active">News</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- News Section -->
+  <section class="news-page">
+    <div class="container">
+      <div class="page-title">
+        <h1>Latest News about G.D. Naidu</h1>
+        <p>Stay updated with the latest developments, biopic updates, and legacy news</p>
+      </div>
+
+      <!-- News Grid -->
+      <div class="news-grid" id="newsContainer">
+        <!-- News cards will be inserted here by JavaScript -->
+      </div>
+
+      <!-- Load More Button -->
+      <div class="news-load-more">
+        <a href="javascript:void(0)" class="load-more-btn" id="loadMoreBtn">
+          <i class="fas fa-sync-alt"></i> Load More Updates
+        </a>
+      </div>
+
+     
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <div class="footer-logo">G.D. Naidu</div>
+          <div class="footer-tagline">Honoring the legacy of India's greatest inventor</div>
+          
+          <div class="footer-nav">
+                        <a href="index.html">Home</a>
+                        <a href="early-life.html">Early Life</a>
+                        <a href="inventions.html">Inventions</a>
+                        <a href="legacy.html">Legacy</a>
+                        <a href="gallery.html">Gallery</a>
+                        <a href="store.html">Store</a>
+                        <a href="news.html">News</a> 
+                        <a href="references.html">References</a>     
+                        
+          </div>
+          <div class="footer-contact-line">
+            Contact : +91 90251 61015
+          </div>
+        </div>
+      </div>
+      
+      <div class="copyright">
+        <div class="footer-tagline">Created with <span>♥</span> by GD Naidu Fan • 2026</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript for News Page -->
+<script src="news-data.js"></script>
+
+<script>
+const newsContainer = document.getElementById("newsContainer");
+const loadMoreBtn = document.getElementById("loadMoreBtn");
+
+let currentIndex = 0;
+const itemsPerLoad = 6; 
+
+function loadNews() {
+  const nextItems = newsData.slice(currentIndex, currentIndex + itemsPerLoad);
+
+  nextItems.forEach(news => {
+    const card = document.createElement("div");
+    card.className = "news-card";
+    card.innerHTML = `
+      <div class="news-image">
+        <img src="${news.image}" alt="${news.title}">
+      </div>
+      <div class="news-content">
+        <div class="news-source">
+          <span class="source-logo">${news.source}</span>
+          <span class="news-date">${news.date}</span>
+        </div>
+        <h3 class="news-title">${news.title}</h3>
+        <p class="news-excerpt">${news.excerpt}</p>
+        <a href="${news.url}" class="read-more">
+          Read More <i class="fas fa-arrow-right"></i>
+        </a>
+      </div>
+    `;
+    card.onclick = () => window.location.href = news.url;
+    newsContainer.appendChild(card);
+  });
+
+  currentIndex += itemsPerLoad;
+
+  // 🔴 Hide button if no more news
+  if (currentIndex >= newsData.length) {
+    loadMoreBtn.style.display = "none";
+  }
+}
+
+// First load → only 6
+loadNews();
+
+// Load more on click
+loadMoreBtn.addEventListener("click", loadNews);
+</script>
+
+
+</body>
+</html>
